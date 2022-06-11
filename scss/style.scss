@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree");
+@import "config";
+@import "button";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container,
+.fullContainer {
+  margin: auto;
+  width: 85%;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  text-align: center;
+  font-size: 18px;
+}
+
+header {
+  background: url("/images/bg-header-mobile.png");
+  background-size: cover;
+  height: 350px;
+
+  .container {
+    .logo {
+      padding-top: 100px;
+    }
+
+    .header-content {
+      padding-top: 50px;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        padding: 20px 0 50px 0;
+        line-height: 25px;
+        color: $Grayish-Blue;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+section {
+  margin-top: 650px;
+
+  .first-article {
+    h2 {
+      line-height: 35px;
+    }
+
+    p {
+      line-height: 25px;
+      font-size: 1rem;
+      padding-top: 10px;
+    }
+
+    .snippet {
+      &-quick,
+      &-icloud,
+      &-complete {
+        @extend %snippet-article;
+      }
+
+      &-laptop {
+        padding-top: 80px;
+      }
+    }
+  }
+
+  .second-article {
+    h2 {
+      padding-top: 200px;
+      color: lighten(black, 15%);
+      font-weight: bold;
+    }
+
+    p {
+      line-height: 25px;
+      font-size: 1rem;
+      padding-top: 20px;
+      padding-bottom: 80px;
+    }
+
+    .clipboard {
+      h2 {
+        padding-top: 50px;
+        font-weight: bold;
+        color: $Dark-Grayish-Blue;
+      }
+
+      p {
+        color: $Grayish-Blue;
+      }
+
+      .blacklists,
+      .text-snippets,
+      .sneak-preview {
+        h2 {
+          font-size: 1.4rem;
+          font-weight: bold;
+          color: $Dark-Grayish-Blue;
+        }
+      }
+    }
+  }
+
+  .third-article {
+    .icon-google,
+    .icon-microsoft,
+    .hewlett,
+    .vector-graphics {
+      @extend %img;
+    }
+
+    .icon-ibm {
+      width: 100px;
+      margin: auto;
+      padding-bottom: 60px;
+    }
+  }
+
+  .fourth-article {
+    h3 {
+      padding-top: 150px;
+      font-weight: bold;
+      font-size: 1.7rem;
+    }
+
+    p {
+      line-height: 25px;
+      font-size: 1.1rem;
+      padding-top: 20px;
+      padding-bottom: 50px;
+      color: $Grayish-Blue;
+    }
+  }
+}
+
+footer {
+  margin-top: 200px;
+  background: lighten($Grayish-Blue, 30%);
+
+  .footer-content {
+    padding: 80px 20px;
+
+    .footer-logo {
+      padding-bottom: 20px;
+
+      img {
+        width: 60px;
+      }
+    }
+
+    ul {
+      li {
+        list-style: none;
+        line-height: 50px;
+        cursor: pointer;
+      }
+
+      li:hover {
+        color: $Strong-Cyan;
+      }
+    }
+
+    .footer-media {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 150px;
+      margin: auto;
+      padding-top: 40px;
+      cursor: pointer;
+
+      // svg:hover {
+      //   fill: $Strong-Cyan;
+      // }
+    }
+  }
+}
+
+@import "desktop";

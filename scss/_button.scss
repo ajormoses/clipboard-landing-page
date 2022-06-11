@@ -1,0 +1,22 @@
+%btn {
+  padding: 16px;
+  margin-bottom: 25px;
+  width: 100%;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.1rem;
+  box-shadow: 1px 2px 3px $Dark-Grayish-Blue;
+  cursor: pointer;
+}
+
+.btn-ios {
+  @extend %btn;
+  background-color: lighten($Strong-Cyan, 5%);
+  box-shadow: 0 10px 20px lighten($Strong-Cyan, 45%);
+}
+
+.btn-mac {
+  @extend %btn;
+  background-color: lighten($Light-Blue, 5%);
+  box-shadow: 0 10px 20px lighten($Light-Blue, 25%);
+}
