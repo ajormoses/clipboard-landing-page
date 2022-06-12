@@ -31,9 +31,19 @@ body {
 }
 
 header {
-  background: url(/images/bg-header-mobile.png);
-  background-size: cover;
-  height: 350px;
+  .header-bg {
+    position: absolute;
+    width: 100%;
+
+    .desktop-bg {
+      display: none;
+    }
+
+    .mobile-bg {
+      height: 350px;
+      width: 100%;
+    }
+  }
 
   .container {
     .logo {
@@ -58,7 +68,7 @@ header {
 }
 
 section {
-  margin-top: 650px;
+  margin-top: 150px;
 
   .first-article {
     h2 {
